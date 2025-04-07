@@ -1,0 +1,263 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+.brand{
+    font-size:40px;
+    color:white;
+    margin-top: 10px;
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}    
+.header nav  {   
+    display: flex;
+    justify-content:row;
+    align-items: center;
+    
+}
+.header nav a{
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: white;
+    margin-right: 30px;
+}
+
+.header nav a:hover{
+    background-color: white;
+    color: black;
+}
+.navbar-links{
+    margin-top: 15px;
+    padding: 20px 35px;
+    margin-bottom: 10px;
+}
+.navbar-links a{
+    font-size: 20px;
+    justify-items: space-between;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.services {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
+}
+
+.services h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-item {
+    background: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 45%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-item h2 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    line-height: 1.6;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+.calculate-bmi {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+  
+h1 {
+    font-size: 1.8em;
+    color: #23457f;
+    margin-bottom: 10px;
+}
+  
+p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.path {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 20px;
+    text-align: left;
+    margin-left: 150px;
+    margin-top: 50px;
+
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.improved{
+    display: flex;
+    justify-content: row;
+    justify-content: space-evenly;
+}
+
+.exercise{
+    width: 600px;
+    height: 400px;
+    align-content: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 10px solid black;
+
+}
+.food{
+    width: 600px;
+    height: 400px;
+    align-content: center;
+    border: 1px solid black;
+    margin-left: 20px;
+    border-radius: 15px;
+    box-shadow: 10px solid black;
+
+}
+.Overeating{
+    width: 600px;
+    height: 400px;
+    align-content: center;
+    border: 1px solid black;
+    margin-left: 20px;
+    border-radius: 15px;
+    box-shadow: 10px solid black;
+
+}
+.weight{
+    width: 300px;
+    margin-left: 50px;
+}
+.athlete{
+    margin-left: 80px;
+    font-weight: 100px;
+    height: 100px;
+}
+.estimates {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    text-align: left;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.method {
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.method h2 {
+    color: #23457f;
+    margin-bottom: 10px;
+}
+
+.method p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+footer{
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    align-content: center;
+    height: 150px;
+    margin-top: 2rem;
+}
+  
+  
+.footer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-faded-text {
+    margin-left: 70px;
+    font-size: 3rem;
+    left: 1rem;
+    bottom: 0rem;
+    color:pink;
+}
+  
+.link-1 a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+  
+.link-1 a:hover {
+    color: #ff4081;
+}
+.icon-wrapper{
+    margin-right: 60px;
+}
+.icon-wrapper a {
+    color: #fff;
+    font-size: 30px;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+.icon-wrapper a:hover {
+    color: #ff4081;
+}

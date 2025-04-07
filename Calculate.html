@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Calculate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" >
+</head>
+<body>
+    <header class="header">
+        <nav  class="navbar">
+                <h1 class="brand">BMI Calculator</h1>
+                <div class="navbar-links">
+                    <a href="calculate.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="service.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+        </nav>
+    </header>
+
+    <center>
+        <div class="container">
+            <div class="group">
+                <h1>Calculate your BMI</h1>
+                    <div class="gender"> 
+                        <div class="gender-group"> 
+                            <input type="radio" name="gender" id="male" value="male"> 
+                            <label for="male" class="text">Male</label> 
+                        </div> 
+                        <div class="gender-group">
+                            <input type="radio" name="gender" id="female" value="female"> 
+                            <label for="female" class="text">Female</label> 
+                        </div>
+                    </div>
+                   
+                    <div class="input-group"> 
+                        <label for="age">Age:                    
+                        </label> <input type="number" id="age" required> 
+                    </div>
+                     
+                    <div class="input-group">
+                        <label for="weight">Weight (kg):</label>
+                        <input type="number" id="weight" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="height">Height (cm):</label>
+                        <input type="number" step="0.01" id="height" required>
+                    </div>
+                    
+                    <div class="btn">                    
+                    <button  onclick="calculatebmi()" class="calculate-button">Calculate</button>
+                    <button  onclick="clearInputs()" id="reload">Clear</button>
+                    </div>
+
+                <div class="result" id="bmiResult">Your BMI is 00.00
+                </div>
+
+                <div id="heading"></div>         
+                <div id="message"></div>  
+                  
+            </div>
+            <div class="th">
+            </div>
+        </div> 
+        
+            <img src="https://static.vecteezy.com/system/resources/previews/016/828/833/non_2x/bmi-classification-chart-measurement-woman-colorful-infographic-with-ruler-female-body-mass-index-scale-collection-from-underweight-to-overweight-fit-person-different-weight-level-eps-vector.jpg">
+        
+        
+        <div class="box1">  
+            <h1 class="intro" >  Introduction to the Body Mass Index (BMI)</h1>
+                <p class="concept">Body Mass Index (BMI) is widely used as an indicator of body fat content. Your weight alone is not sufficient to establish if you are in a healthy weight range. For example, a tall but slender person can weigh more than a short but plump individual. But the former may enjoy better health as long as their weight is suitable for their height. The ideal weight is also likely to differ for men and women of similar heights.<br><br>
+        
+                How then do you know whether you fall in the healthy weight range or not? Your BMI solves this confusion. It correlates your weight with your height and evaluates whether your weight is appropriate for your stature. You can use a BMI calculator to find out your BMI.<br ><br>
+                        
+                Although not an exact measurement of body fat percentage, in most cases, BMI is a reliable tool for establishing risk levels for illnesses, especially ailments related to excess body fat. Many healthcare professionals use BMI to determine effective doses for medicines. Often people with a higher BMI need higher doses. Hence, it is crucial to be aware of your BMI to ensure your overall wellness. </p>     
+        </div> 
+        
+        
+        <div class="box">
+            Why use the BMI calculator.
+                <div class="use">
+                    Using a BMI calculator is a convenient way to determine your BMI score quickly. Below are some key reasons to use this tool:
+                </div>
+                <div class="cont">
+                    <div class="box2">
+                        <div class="health"><img src="health.png"></div>
+                        Health Monitoring 
+                    </div> 
+                    <div class="box2">
+                        <div class="fitness"><img src="https://www.pngmart.com/files/23/Goals-PNG-Free-Download.png"></div>
+                        Fitness Goals
+                    </div>                    
+                    <div class="box2">
+                        <div class="weight"><img src="https://tse2.mm.bing.net/th?id=OIP.NR7YXJu_W2Iy6RMahsD6XgHaE8&pid=Api&P=0&h=180"></div>
+                        Weight Management
+                    </div>  
+                    <div class="box2">
+                        <div class="assessment"><img src="https://tse4.mm.bing.net/th?id=OIP.4rZu43qnOMnvoEuP81dZcQHaHa&pid=Api&P=0&h=180"></div>
+                        Health Assessment
+                    </div>  
+                </div>    
+        </div>
+        
+        <center>
+            <section class="calculate-bmi">
+                <h1>How to calculate BMI</h1>
+                <p>
+                  If you want to calculate your BMI, you have to find out your weight and height first. Once you know these values, you can arrive at the result by following the two steps mentioned below:
+                </p>
+
+                <div class="steps">
+                  <div class="step">
+                    <span class="step-number">1</span>
+                    <p>Multiply your height by itself (height × height).</p>
+                  </div>
+                  <div class="step">
+                    <span class="step-number">2</span>
+                    <p>Divide your weight by the answer you get in the first step.</p>
+                  </div>
+                </div>
+
+                <h2>The equations for calculating the BMI are as follows:</h2>
+                <div class="equations">
+                  <div class="equation">
+                    <h3>International System of Units (SI)</h3>
+                    <p><strong>BMI = weight (kg) ÷ (height (m))²</strong></p>
+                    <p>
+                      <strong>Example:</strong><br>
+                      For a 177 cm (1.77 m) individual weighing 75 kg,<br>
+                      BMI = 75 ÷ (1.77 × 1.77) = 75 ÷ 3.13 = 23.96
+                    </p>
+                  </div>
+                  <div class="equation">
+                    <h3>Imperial System</h3>
+                    <p><strong>BMI = weight (lb) ÷ (height (inches))² × 703</strong></p>
+                    <p>
+                      <strong>Example:</strong><br>
+                      For a 160-pound, 5'8" (68") individual weighing 75 kg,<br>
+                      BMI = (160 ÷ (68 × 68)) × 703 = (160 ÷ 4624) × 703 = 24.3
+                    </p>
+                  </div>
+                </div>
+
+            </section>
+
+            
+            <div class="children">
+                <div class="section">
+                    <h2><span class="icon">👩‍⚕️</span> How to calculate BMI</h2>
+                    <p>For adults over the age of 20 years, BMI values are grouped into the following weight status categories<sup>1</sup>:</p>
+                    <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>BMI</th>
+                                <th>Weight status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Below 18.5</td>
+                                <td>Underweight</td>
+                            </tr>
+                            <tr>
+                                <td>18.5–24.9</td>
+                                <td>Normal weight</td>
+                            </tr>
+                            <tr>
+                                <td>25–29.9</td>
+                                <td>Overweight</td>
+                            </tr>
+                            <tr>
+                                <td>30–35</td>
+                                <td>Obese</td>
+                            </tr>
+                            <tr>
+                                <td>Over 35</td>
+                                <td>Morbid obesity</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <p class="note">The range remains the same for males and females. There is no separate BMI calculator for men and women.</p>
+                </div>
+        
+                <div class="teenage">
+                    <h2><span class="icon">👶</span> BMI for Children</h2>
+                    <p>In children, body fat content changes with age. It is also normal for teenage girls to have more body fat than boys. BMI calculation for children follows the same formula as adults. But the value is then plotted on standard gender-specific BMI-for-age percentile charts for children. It determines the child's weight status compared to children of the same gender and age.</p>
+                    <div class="example">
+                        For example, a 25th percentile BMI for a 6-year-old female child would indicate that the child's weight is higher than 25% of girls aged 6.
+                    </div>
+                </div>
+            </div>        
+                
+        
+        
+  
+        </center>
+    <div  class="excess">
+        <h6>What are the health risks related to being overweight?</h6>
+        <p class="countless">Excess weight brings with it countless health complications, some of which can be fatal. A higher BMI than average (over 25) is associated with increased risks for diseases like:</p>
+        <div class="issues">
+            <div class="conditions">   
+                <ul>
+                    <li>Type 2 diabetes</li>
+                    <li>Heart conditions</li>
+                    <li>Higher levels of LDL cholesterol and lower count of HDL cholesterol in the blood, increasing chances of coronary artery diseases and heart attacks</li>
+                    <li>High triglycerides</li>
+                    <li>Stroke</li>
+                    <li>High blood pressure</li>
+                    <li>Gall bladder-related complications</li>
+                    <li>Insulin resistance</li>
+                    <li>Osteoarthritis or breakdown of joint cartilage leading to painful joints</li>
+                    <li>Sleep apnea or intermittent breathing obstruction during sleep</li>
+                    <li>Atherosclerosis or building up of cholesterol deposits (plaques) in blood vessels (arteries)</li>
+                    <li>Skin health problems like skin tags, darkening of the skin</li>
+                    <li>Breathing trouble</li>
+                    <li>Hernia</li>
+                </ul>
+            </div>    
+            <div class="problems">
+                <ul>
+                    <li>Varicose veins</li>
+                    <li> Cataract</li>   
+                    <li>Gout</li>
+                    <li>Stress incontinence or urge to urinate frequently</li>
+                    <li>Certain types of cancer (breast, colon, endometrial, gall bladder, kidney, liver)</li>
+
+                </ul>
+                    <img class="pic" src="https://image.freepik.com/free-vector/tiny-women-near-obese-chart-scales-isolated-flat-vector-illustration-cartoon-female-characters-diet-using-weight-control-with-bmi-body-mass-index-medical-fitness-exercise-concept_74855-10177.jpg">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="risks">
+        <h1>Risks of Being Underweight</h1>
+        <p>Having a BMI below 18.5 is also fraught with health risks, such as the ones listed below:</p>
+        <div class="health-123">
+            <img src="https://www.thefitindian.com/conditions/wp-content/uploads/2020/05/Consequences-Of-Overweight.jpg">
+            <ul class="health-risks">
+                <li>Vitamin deficiencies</li>
+                <li>Anaemia (low red blood cell count and hence reduced capacity to carry oxygen)</li>
+                <li>Diminished immunity or the ability to ward off infections</li>
+                <li>Osteoporosis or brittle bones that break easily</li>
+                <li>Malnutrition</li>
+                <li>Developmental delays in children</li>
+                <li>Hormonal imbalances</li>
+                <li>Disruptions in women's menstrual cycle causing complications in conception</li>
+            </ul>
+        </div>
+        <p>Being underweight can also be an indication of underlying health conditions like anorexia. Hence, if your BMI calculator shows a value matching the underweight category, you should consult a medical professional.</p>
+    </div>
+
+
+    <div class="Conclusion">
+        <h5>Conclusion</h5>
+        <p class="stress">Due to the elevated stress of today's lifestyle and increased pollution levels, obesity and associated lifestyle diseases are rampant even among the youth. Thus, a BMI calculator in India is a useful tool as it can help you assess your health risks. A medical practitioner can help you understand your BMI's implications and guide you towards healthy life choices to prevent any complications.<br><br>
+
+        However, apart from maintaining a healthy lifestyle, it is also crucial to stay prepared for unexpected health complications. Healthcare costs are skyrocketing, and the expenses for quality treatment can strain your financial resources. Fortunately, a health insurance policy can safeguard your savings by covering your healthcare expenses. Hence, along with adopting healthy habits, you can also consider investing in a comprehensive health insurance policy. This will secure your family against the financial repercussions of medical exigencies.</p>
+    </div>
+        
+    <footer>
+        <div class="footer-wrapper">
+          <div class="footer-faded-text">BMI Calculator</div>
+            <nav class="link-1">
+                <a href="Calculate.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service.html.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="icon-wrapper">
+                <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin icon"></i></a>
+                <a href="https://github.com"><i class="fa-brands fa-github icon"></i></a>
+                <a href="https://twitter.com"><i class="fa-brands fa-twitter icon"></i></a>
+                <a href="https://www.instagram.com"><i class="fa-brands fa-instagram icon"></i></a>
+                <a href="https://www.messenger.com"><i class="fa-regular fa-envelope icon"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+
+         
+        <script src="Calculate.js"></script>        
+    
+</body>
+</html>

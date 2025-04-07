@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About BMI Calculator</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" >
+
+</head>
+
+<body>
+    <header class="header">
+        <nav  class="navbar">
+                <h1 class="brand">BMI Calculator</h1>
+                <div class="navbar-links">
+                    <a href="calculate.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="service.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-container">
+            <section class="info-section">
+                <h2>What is BMI?</h2>
+                <p>Body Mass Index (BMI) is a simple calculation used to assess whether a person has a healthy body weight for a given height. It is defined as the individual's body mass divided by the square of their height.</p>
+            </section>
+
+            <section class="info-section">
+                <h2>How Does the Calculator Work?</h2>
+                <p>Our BMI Calculator takes your weight in kilograms and your height in meters to compute your BMI value. The formula used is:</p>
+                <p><strong>BMI = weight (kg) / (height (m) * height (m))</strong></p>
+            </section>
+
+            <section class="info-section">
+                <h2>Why is BMI Important?</h2>
+                <p>BMI is a useful screening tool that helps categorize individuals into different weight categories: underweight, normal weight, overweight, and obese. This can provide insight into potential health risks associated with being outside the healthy weight range.</p>
+            </section>
+
+            <section class="info-section">
+                <h2>Limitations of BMI:</h2>
+                <p>While BMI is a useful general guideline, it does not directly measure body fat or account for factors like muscle mass, bone density, and overall body composition. For a comprehensive assessment of health, consider consulting a healthcare professional.</p>
+            </section>
+        </div>
+    </main>
+
+
+    <div class="questions">
+        Frequently asked questions
+    </div>
+    <div class="accordianbg">
+        
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">1. What is the purpose of calculating BMI?</div>
+                <div class="accordion-content">The primary purpose of calculating BMI for women and men is to assess whether the weight is within a healthy range for the height. The BMI calculator gives you a numeric value that helps you understand if you are underweight, average weight, overweight or obese. This, in turn, highlights the health concerns you are at risk for. The BMI calculator can be used by individuals, patients, as well as healthcare professionals to gain a better view of a person’s health. Moreover, it is a straightforward and simple tool that enables you to take charge of your health.</div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">2. Are there any age or gender specific considerations for BMI?</div>
+                <div class="accordion-content">Yes, BMI calculations are generally age and gender specific. This means you must know how to calculate BMI for men and women separately to understand the assessment in each case effectively. While the method of calculation remains the same, the results may be perceived differently for men and women</div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">3. Can BMI be used during pregnancy?</div>
+                <div class="accordion-content">BMI is generally not an ideal tool for assessing a woman’s weight during pregnancy. This is because pregnancy brings about natural changes in your weight and body distribution, which makes BMI less accurate. It is crucial for pregnant women to ask their healthcare providers to monitor their weight and health during this stage. Instead of using BMI, healthcare professionals may employ alternative methods to ensure more precise and relevant assessments</div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">4. What are the limitations of the BMI calculator?</div>
+                <div class="accordion-content">Although the BMI calculation formula is quite accurate in determining your health status, it has certain limitations. One significant drawback of the calculator is that it cannot differentiate between muscle and fat. This can pose a concern for athletes and those with above-average muscle mass. The BMI calculator also fails to account for body fat distribution. It does not distinguish between muscle, excess fat or bone mass, nor does it offer insights into how fat is distributed among individuals. Hence, it is crucial to incorporate other health metrics for a more nuanced health assessment</div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">5. What is a good BMI for a man?</div>
+                <div class="accordion-content">YA BMI between 18.5 and 24.9 is generally considered normal for most adult men. However, as highlighted above, it is essential to understand that this does not take into consideration the individual’s muscle mass, fitness level and specific health conditions.</div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">6. What is a good BMI for a woman?</div>
+                <div class="accordion-content">Like men, a BMI between 18.5 and 24.9 is commonly considered healthy for most adult females. Nevertheless, individual factors such as muscle mass, fitness level and specific health conditions play a crucial role in a comprehensive health assessment.</div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">7.  Should I ignore my weight and concentrate on my BMI?</div>
+                <div class="accordion-content">It is essential not to ignore either your weight or BMI, as both metrics play integral roles in understanding your overall well-being. Weight is a fundamental component in the calculation of BMI, while BMI considers the relationship between your weight and height to provide a realistic picture of your overall health. Therefore, you must consider both weight and BMI.</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const headers = document.querySelectorAll('.accordion-header');
+        headers.forEach(header => {
+            header.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+
+
+    <div class="img-container">
+        <img src="https://findhealthtips.com/wp-content/uploads/2022/11/body-mass-index-bmi-chart-1.jpg" alt="BMI Chart">
+    </div>
+
+    <footer>
+        <div class="footer-wrapper">
+          <div class="footer-faded-text">BMI Calculator</div>
+            <nav class="link-1">
+                <a href="Calculate.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service.html.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="icon-wrapper">
+                <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin icon"></i></a>
+                <a href="https://github.com"><i class="fa-brands fa-github icon"></i></a>
+                <a href="https://twitter.com"><i class="fa-brands fa-twitter icon"></i></a>
+                <a href="https://www.instagram.com"><i class="fa-brands fa-instagram icon"></i></a>
+                <a href="https://www.messenger.com"><i class="fa-regular fa-envelope icon"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+
+</html>
+

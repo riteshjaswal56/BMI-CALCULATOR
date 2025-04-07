@@ -1,0 +1,680 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.brand{
+    font-size:60px;
+    color:white;
+    margin-top: 10px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}    
+.header nav  {   
+    display: flex;
+    justify-content:row;
+    align-items: center;
+    
+}
+.header nav a{
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: white;
+    
+}
+
+.header nav a:hover{
+    background-color: white;
+    color: black;
+}
+.navbar-links{
+    margin-top: 15px;
+    padding: 20px 35px;
+    margin-bottom: 10px;
+}
+.navbar-links a{
+    font-size: 20px;
+    justify-items: space-between;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+a{
+    margin:25px;
+}
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 1000px;
+    text-align: center;
+    height: 530px;
+    display: flex;
+    justify-content: row;
+    margin-top: 112px;
+    animation: fadeInScale 1.5s;
+}
+
+#heading {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(44, 44, 44);
+}
+
+#bmi-output {
+    font-size: 20px;
+    color: green;
+    margin-top: 10px;
+}
+
+#message {
+    font-size: 25px;
+    margin-top: 10px;
+    color: rgb(46, 45, 45);
+    animation: fadeIn 1s ease-in-out;
+}
+.group{
+    width: 380px;
+}   
+
+.th{
+    width: 600px;
+    height: 300px;
+    background-image: url(https://www.pnbmetlife.com/content/dam/pnb-metlife/images/icons/bmi-calculator/meter.png);
+    background-size: cover;
+    margin-left: 60px;
+    animation: fadeInScale 1.5s;
+    margin-top: 80px;
+}
+img{
+    height: 450px;
+    width: 900px;
+    margin-top: 50px;
+    border-radius: 20px;
+}   
+h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: #333;
+    margin-top: 0;
+}
+.gender{
+    display: flex;
+    justify-content: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+.gender-group{
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.input-group {
+    margin-bottom: 20px;
+    animation: fadeIn 3s ease-in-out;
+    font-weight: bold;
+}
+    
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+    
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    animation: fadeIn 3s ease-in-out;
+}
+    
+input:focus {
+    border-color: #4facfe;
+    outline: none;
+}
+
+.calculate-button{
+    width: 50%;
+    height: 40px;
+    padding:0;
+    background-color: rgb(245, 243, 243);
+    color:black;
+    border: 0.1px solid rgb(203, 202, 202);
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: fadeIn 2s ease-in-out;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+#reload{
+    width: 50%;
+    height: 40px;
+    padding: 0;
+    background-color: rgb(245, 243, 243);
+    color: black;
+    border: 0.1px solid rgb(203, 202, 202);
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: fadeIn 2s ease-in-out;
+    margin-top: 8px;
+    margin-left: 30px;
+}
+.result {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 30px;
+    font-size: 24px;
+    margin-left: 40px;
+    align-items: center;
+}
+#message{
+    font-weight: bold;
+    color: #143a72;
+}
+.btn{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 17px;
+}
+.calculate-button:hover,
+.reload:hover {
+    background-color: rgb(215, 214, 214);
+}
+h4{
+    display: flex;
+    justify-content: row;
+    justify-content: center;
+}
+
+.box1{
+    width:80%;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    color: black;
+    margin-top:25px;
+    height: 450px;
+    align-content: center;
+    border-radius: 20px;
+    justify-content: center;  
+}
+.intro{
+    margin-bottom:20px;
+    font-size:25px ;
+    color: #143a72; 
+}
+.concept{
+    margin-top:25px ;
+    color: black;
+    font-size:15px ;
+    text-align: justify;
+}
+.box {
+    width: 95%;
+    background-color: rgba(245, 222, 179, 0.256);
+    font-family: Arial, sans-serif;
+    font-size:30px;
+    color: #143a72;
+    margin-top: 50px;
+    height: 450px;
+    align-content: center;
+    border-radius: 20px;
+}
+.use {
+    color: black;
+    font-size: 20px;
+    padding:50px ;
+}
+.cont {
+    display: flex;
+    flex-direction:row;
+    margin-left:50px;
+    
+}
+.box2{
+    width: 300px;
+    font-size: 20px;
+    height: 100px;
+    align-items: center;
+    margin-right: 45px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    align-content: center;  
+    box-shadow:10px solid black ;
+    transition: transform 0.3s; 
+    display: flex;
+    justify-content: center;
+}
+.box2:hover{
+    transform: scale(1.05);
+    background-color: wheat;
+}
+.box2 img{
+    width: 50px;
+    height: 40px;
+    margin-bottom: 40px;
+    margin-right:20px;
+}
+
+.calculate-bmi {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+  
+h1 {
+    font-size: 1.8em;
+    color: #23457f;
+    margin-bottom: 10px;
+}
+  
+p {
+    color: #555;
+    margin-bottom: 20px;
+}
+  
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px auto;
+    text-align: left;
+}
+  
+.step {
+    display: flex;
+    align-items: center;
+    background: #f6f6f6;
+    border-radius: 8px;
+    padding: 10px 5px;
+    font-size: 0.9em;
+}
+  
+.step-number {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    color: #000;
+    text-align: center;
+    line-height: 25px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+  
+h2 {
+    font-size: 1.4em;
+    color: #444;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+  
+.equations {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    text-align: left;
+  }
+  
+.equation {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+  
+h3 {
+    font-size: 1.2em;
+    color: #23457f;
+    margin-bottom: 10px;
+}
+
+strong {
+    color: #23457f;
+}
+  
+.note {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 20px;
+}
+  
+.bmi-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff885f;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+  
+.bmi-button:hover {
+    background: #e76f4b;
+}
+
+.children {
+    display: flex;
+    justify-content: row;
+    align-content: center;
+    max-width: 90%;
+    height: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f5fbff;
+    border: none;
+    border-radius: 15px;
+}
+
+.section {
+    width: 600px;
+    height: 450px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 80px;
+    margin-top: 25px;
+    
+}
+.table{
+    width: 400px;
+    border-radius: 5px;
+}
+.teenage{
+    width: 550px;
+    height: 415px;
+    padding: 17px;
+    margin-left: 30px;
+    margin-top: 25px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: left;
+
+}
+h2 {
+    font-size: 1.5rem;
+    color: #003366;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    font-size: 1.8rem;
+    margin-right: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.example {
+    background-color: #f9f9f9;
+    border-left: 5px solid #ffa726;
+    padding: 10px;
+    margin: 15px 0;
+    font-style: italic;
+}
+
+.cta-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #ffa726;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #fb8c00;
+}
+
+.excess{
+    width: 80%;
+    height: 670px;
+    background-color: white;
+    border:none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    align-content: center;
+    margin-top: 70px;
+}
+.countless{
+    width: 80%;
+    height: auto;
+    margin-top: 0;
+    font-weight:bold;
+}
+.issues{
+    display: flex;
+    justify-content: row;
+}
+h6{
+    font-size: 23px;
+    color: #143a72;
+}
+p{
+    font-size: 15px;
+}
+.conditions{
+    width: 400px;
+    margin-left: 150px;
+    text-align: left;
+    font-size: 17px;
+    
+}
+.problems{
+    width: 350px;
+    margin-left: 100px;
+    text-align: left;
+    font-size: 17px;
+}
+.pic{
+    width: 400px;
+    height: 200px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+}
+.risks {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 850px;
+    height: 460px;
+    margin: 0 auto;
+    margin-top: 75px;
+}
+
+h1 {
+    text-align: center;
+    color: #2d2d2d;
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.health-123 {
+    display: flex;
+    justify-items: row;
+}
+.health-123 img{
+    width: 280px;
+    height: 230px;
+    margin: auto;
+    margin-left: 20px;
+}
+.health-risks {
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.health-risks li {
+    margin-bottom: 8px;
+    text-align:left;
+}
+
+ul li:before {
+    font-size: 20px; 
+    margin-left: -20px;
+}
+
+.Conclusion {
+    background-color:rgba(245, 222, 179, 0.256);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    height: 300px;
+    margin-top: 75px;
+}
+
+h5{
+    text-align: center;
+    color: #2d2d2d;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.stress {
+    font-size: 17px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 15px;
+    
+}
+footer{
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    align-content: center;
+    height: 150px;
+    margin-top: 2rem;
+}
+  
+.footer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-faded-text {
+    margin-left: 70px;
+    font-size: 3rem;
+    left: 1rem;
+    bottom: 0rem;
+    color:pink
+}
+  
+.link-1 a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+  
+.link-1 a:hover {
+    color: #ff4081;
+}
+.icon-wrapper{
+    margin-right: 60px;
+}
+.icon-wrapper a {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+
+}
+  
+.icon-wrapper a:hover {
+    color: #ff4081;
+}
+ @keyframes fadeIn { 
+    from {
+     opacity: 0.5; 
+    } 
+    to {
+     opacity: 1; 
+    } 
+}
+@keyframes fadeInScale { 
+    from { 
+    opacity: 0; 
+    transform: scale(0.9); 
+    } 
+    to{ 
+    opacity: 1; 
+    transform: scale(1); 
+    } 
+}
